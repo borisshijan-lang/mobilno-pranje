@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mobilno Pranje</title>
-<meta name="description" content="Mobilno pranje vozila na vašoj adresi u Beogradu. Profesionalno dubinsko čišćenje, poliranje i zaštita.">
+<meta name="description" content="Mobilno pranje vozila na vašoj adresi. Profesionalno čišćenje, poliranje i zaštita.">
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-b from-indigo-900 via-slate-950 to-slate-900 text-white scroll-smooth font-sans">
+<body class="bg-gradient-to-b from-indigo-900 via-slate-950 to-slate-900 text-white font-sans scroll-smooth">
 
 <!-- NAVBAR -->
 <header class="bg-slate-900/90 backdrop-blur-sm border-b border-slate-800 fixed w-full z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-4 flex justify-between items-center">
     <a href="#top" class="text-3xl font-bold text-blue-400 hover:text-blue-300 transition">Mobilno Pranje</a>
-    <nav class="space-x-6 text-sm">
+    <nav class="hidden md:flex space-x-6 text-sm">
       <a href="#home" class="hover:text-blue-300">Početna</a>
       <a href="#o-nama" class="hover:text-blue-300">O nama</a>
       <a href="#usluge" class="hover:text-blue-300">Usluge</a>
@@ -23,49 +23,41 @@
       <a href="#kontakt" class="hover:text-blue-300">Kontakt</a>
       <button onclick="openAdmin()" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-xl transition">Admin</button>
     </nav>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl">☰</button>
   </div>
 </header>
+
+<div id="mobileMenu" class="hidden fixed inset-0 bg-slate-900/95 z-40 flex flex-col items-center justify-center space-y-6 text-xl">
+  <a href="#home" class="hover:text-blue-300" onclick="closeMobileMenu()">Početna</a>
+  <a href="#o-nama" class="hover:text-blue-300" onclick="closeMobileMenu()">O nama</a>
+  <a href="#usluge" class="hover:text-blue-300" onclick="closeMobileMenu()">Usluge</a>
+  <a href="#cene" class="hover:text-blue-300" onclick="closeMobileMenu()">Cene</a>
+  <a href="#zakazivanje" class="hover:text-blue-300" onclick="closeMobileMenu()">Zakazivanje</a>
+  <a href="#faq" class="hover:text-blue-300" onclick="closeMobileMenu()">FAQ</a>
+  <a href="#kontakt" class="hover:text-blue-300" onclick="closeMobileMenu()">Kontakt</a>
+</div>
 
 <div id="top"></div>
 
 <!-- HERO -->
-<section id="home" class="pt-40 pb-32 text-center">
-  <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Mobilno pranje vozila na vašoj adresi</h1>
-  <p class="text-slate-300 max-w-2xl mx-auto mb-10 text-lg md:text-xl">
+<section id="home" class="pt-40 pb-32 text-center px-4 sm:px-6 md:px-8">
+  <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6">Mobilno pranje vozila na vašoj adresi</h1>
+  <p class="text-slate-300 max-w-2xl mx-auto mb-10 text-lg sm:text-xl">
     Profesionalno dubinsko čišćenje, poliranje i zaštita bez dolaska u perionicu. Izaberite luksuznu uslugu direktno kod vas.
   </p>
   <a href="#zakazivanje" class="bg-blue-500 hover:bg-blue-400 px-10 py-4 rounded-3xl text-lg font-bold transition">Zakaži termin</a>
 </section>
 
 <!-- O NAMA -->
-<section id="o-nama" class="max-w-6xl mx-auto px-6 py-20">
-  <h2 class="text-4xl font-bold mb-6 text-center">O nama</h2>
-  <p class="text-slate-300 max-w-3xl mx-auto text-center text-lg">
-    Mobilno Pranje je tim profesionalaca sa višegodišnjim iskustvom u auto detailing industriji. Koristimo samo premium proizvode i savremene tehnike, dolazimo direktno na vašu adresu i pružamo uslugu na najvišem nivou.
+<section id="o-nama" class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-20">
+  <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center">O nama</h2>
+  <p class="text-slate-300 max-w-3xl mx-auto text-center text-base sm:text-lg">
+    Mobilno Pranje je tim profesionalaca sa višegodišnjim iskustvom. Koristimo premium proizvode i savremene tehnike, dolazimo direktno na vašu adresu i pružamo uslugu na najvišem nivou.
   </p>
 </section>
 
-<!-- ZAŠTO IZABRATI NAS -->
-<section class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8 text-center">
-  <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:scale-105 transition">
-    <div class="text-5xl mb-4">⏱️</div>
-    <h3 class="text-xl font-bold mb-2">Brza i fleksibilna</h3>
-    <p class="text-slate-400">Dolazimo kad vam odgovara, bez čekanja i gužvi.</p>
-  </div>
-  <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:scale-105 transition">
-    <div class="text-5xl mb-4">💎</div>
-    <h3 class="text-xl font-bold mb-2">Premium kvaliteta</h3>
-    <p class="text-slate-400">Samo najkvalitetniji proizvodi i alati za vaš automobil.</p>
-  </div>
-  <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:scale-105 transition">
-    <div class="text-5xl mb-4">🛡️</div>
-    <h3 class="text-xl font-bold mb-2">Sigurno i pouzdano</h3>
-    <p class="text-slate-400">Vaš automobil je u sigurnim rukama naših profesionalaca.</p>
-  </div>
-</section>
-
 <!-- USLUGE -->
-<section id="usluge" class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
+<section id="usluge" class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-20 grid grid-cols-1 md:grid-cols-3 gap-8">
   <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:scale-105 transition text-center">
     <div class="text-5xl mb-4">🚿</div>
     <h3 class="text-xl font-bold mb-2">Pranje</h3>
@@ -84,7 +76,7 @@
 </section>
 
 <!-- CENE -->
-<section id="cene" class="max-w-7xl mx-auto px-6 py-20">
+<section id="cene" class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-20">
   <h2 class="text-4xl font-bold mb-10 text-center">Cene / Paketi</h2>
   <div class="grid md:grid-cols-3 gap-8">
     <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 text-center hover:scale-105 transition">
@@ -106,7 +98,7 @@
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="max-w-6xl mx-auto px-6 py-20">
+<section id="faq" class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-20">
   <h2 class="text-3xl font-bold mb-6 text-center">Često postavljana pitanja</h2>
   <div class="space-y-4 max-w-3xl mx-auto">
     <div class="bg-slate-900 p-4 rounded-xl">
@@ -120,29 +112,35 @@
   </div>
 </section>
 
-<!-- ZAKAZIVANJE -->
-<section id="zakazivanje" class="bg-slate-900 py-20">
-  <div class="max-w-5xl mx-auto px-6">
+<!-- ZAKAZIVANJE / KALENDAR -->
+<section id="zakazivanje" class="bg-slate-900 py-20 px-4 sm:px-6 md:px-8">
+  <div class="max-w-5xl mx-auto">
     <h2 class="text-3xl font-bold mb-10 text-center">Zakazivanje termina</h2>
+    
+    <!-- Forma -->
     <form onsubmit="requestBooking(event)" class="space-y-4">
-      <input required placeholder="Ime" class="w-full p-3 rounded-xl bg-slate-800" />
-      <input required placeholder="Telefon (npr. 381600000000)" class="w-full p-3 rounded-xl bg-slate-800" />
-      <input required type="date" class="w-full p-3 rounded-xl bg-slate-800" />
-      <select class="w-full p-3 rounded-xl bg-slate-800">
-        <option>Pranje</option>
-        <option>Poliranje</option>
-        <option>Zaštita / Vosak</option>
+      <input id="ime" required placeholder="Ime" class="w-full p-3 rounded-xl bg-slate-800" />
+      <input id="tel" required placeholder="Telefon (npr. 381600000000)" class="w-full p-3 rounded-xl bg-slate-800" />
+      <input id="datum" required type="date" class="w-full p-3 rounded-xl bg-slate-800" />
+      <select id="paket" class="w-full p-3 rounded-xl bg-slate-800" onchange="updateTimes()">
+        <option value="osnovni">Pranje (1h)</option>
+        <option value="premium">Premium (2h)</option>
+        <option value="full">Full Detailing (3h)</option>
       </select>
-      <button class="w-full bg-blue-500 hover:bg-blue-400 py-3 rounded-xl transition font-bold">Pošalji zahtev</button>
+      
+      <!-- Kalendar termina -->
+      <div id="times" class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4"></div>
+      
+      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-400 py-3 rounded-xl transition font-bold">Pošalji zahtev</button>
       <p id="msg" class="text-green-400 hidden mt-2">Zahtev za termin je poslat. Čeka se potvrda.</p>
     </form>
   </div>
 </section>
 
-<!-- KONTAKT -->
-<section id="kontakt" class="py-20 text-center">
+<!-- Kontakt -->
+<section id="kontakt" class="py-20 text-center px-4 sm:px-6 md:px-8">
   <h2 class="text-3xl font-bold mb-4">Kontakt</h2>
-  <p class="text-slate-400">Telefon / WhatsApp: 0668009318</p>
+  <p class="text-slate-400">Telefon / WhatsApp: 066 800 9318</p>
   <a href="https://wa.me/381668009318" class="inline-block mt-4 bg-green-600 px-6 py-3 rounded-xl hover:bg-green-500 transition">Pošalji poruku</a>
 </section>
 
@@ -162,13 +160,48 @@
 </div>
 
 <script>
+// MOBILE MENU
+const mobileBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+mobileBtn.addEventListener('click', ()=>{ mobileMenu.classList.toggle('hidden'); });
+function closeMobileMenu(){ mobileMenu.classList.add('hidden'); }
+
+// TERMINI I ZAKAZIVANJE
+const WORK_START=10; // 10h
+const WORK_END=20;   // 20h
+
+function updateTimes(){
+  const paket=document.getElementById('paket').value;
+  let duration=1; // default 1h
+  if(paket==='premium') duration=2;
+  if(paket==='full') duration=3;
+  
+  const container=document.getElementById('times');
+  container.innerHTML='';
+  
+  for(let h=WORK_START; h+duration<=WORK_END; h++){
+    const btn=document.createElement('button');
+    btn.className='bg-blue-500 hover:bg-blue-400 rounded-xl py-2 transition';
+    btn.textContent=`${h}:00 - ${h+duration}:00`;
+    btn.onclick=()=>{selectedTime=`${h}:00 - ${h+duration}:00`; highlightSelected(btn);}
+    container.appendChild(btn);
+  }
+}
+
+let selectedTime='';
+function highlightSelected(btn){
+  document.querySelectorAll('#times button').forEach(b=>b.classList.remove('ring-4','ring-blue-300'));
+  btn.classList.add('ring-4','ring-blue-300');
+}
+
+// LOCALSTORAGE ZA TERMIN
 function getRequests(){ return JSON.parse(localStorage.getItem('requests')||'[]'); }
 function renderRequests(){
   const list=document.getElementById('list'); list.innerHTML='';
   getRequests().forEach((b,i)=>{
     const div=document.createElement('div');
     div.className='bg-slate-900 p-4 rounded-xl flex justify-between items-center';
-    div.innerHTML=`<span>${b.ime} | ${b.tel} | ${b.datum} | ${b.usluga}</span>
+    div.innerHTML=`<span>${b.ime} | ${b.tel} | ${b.datum} | ${b.usluga} | ${b.vreme}</span>
       <div>
         <button onclick="confirmRequest(${i})" class='text-green-400 mr-2 hover:text-green-300 transition'>Potvrdi</button>
         <button onclick="deleteRequest(${i})" class='text-red-400 hover:text-red-300 transition'>Obriši</button>
@@ -179,16 +212,24 @@ function renderRequests(){
 
 function requestBooking(e){
   e.preventDefault();
-  const inputs=e.target.querySelectorAll('input,select');
-  const booking={ime:inputs[0].value,tel:inputs[1].value,datum:inputs[2].value,usluga:inputs[3].value};
+  const ime=document.getElementById('ime').value;
+  const tel=document.getElementById('tel').value;
+  const datum=document.getElementById('datum').value;
+  const usluga=document.getElementById('paket').value;
+  if(!selectedTime){ alert('Izaberite vreme'); return; }
+  
+  const booking={ime,tel,datum,usluga,vreme:selectedTime};
   const data=getRequests();
   data.push(booking);
   localStorage.setItem('requests',JSON.stringify(data));
   document.getElementById('msg').classList.remove('hidden');
   e.target.reset();
+  selectedTime='';
+  updateTimes();
   renderRequests();
 }
 
+// ADMIN
 function openAdmin(){document.getElementById('adminModal').classList.remove('hidden');}
 function closeAdmin(){document.getElementById('adminPanel').classList.add('hidden');}
 function login(){
@@ -205,12 +246,13 @@ function confirmRequest(i){
   confirmed.push(requests[i]);
   localStorage.setItem('confirmed',JSON.stringify(confirmed));
 
-  // WhatsApp poruka
+  // WhatsApp
   const name=requests[i].ime;
   const date=requests[i].datum;
   const service=requests[i].usluga;
-  const phone=requests[i].tel.replace(/\D/g,''); // samo brojevi
-  const message=`Zdravo ${name}! Vaš termin za ${service} je potvrđen za datum ${date}. Hvala što ste izabrali Mobilno Pranje!`;
+  const time=requests[i].vreme;
+  const phone=requests[i].tel.replace(/\D/g,'');
+  const message=`Zdravo ${name}! Vaš termin za ${service} je potvrđen za datum ${date} u terminu ${time}. Hvala što ste izabrali Mobilno Pranje!`;
   const waLink=`https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(waLink,'_blank');
 
@@ -226,6 +268,9 @@ function deleteRequest(i){
   localStorage.setItem('requests',JSON.stringify(requests));
   renderRequests();
 }
+
+// inicijalizacija
+updateTimes();
 </script>
 
 </body>
