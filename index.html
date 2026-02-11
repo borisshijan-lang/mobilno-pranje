@@ -4,156 +4,181 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mobilno Pranje</title>
+  <meta name="description" content="Mobilno pranje vozila na vašoj adresi u Beogradu. Profesionalno dubinsko čišćenje, poliranje i zaštita." />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-white scroll-smooth">
 
-  <!-- NAVBAR -->
-  <header class="bg-slate-900 border-b border-slate-800 fixed w-full z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#top" class="text-2xl font-bold text-blue-500">Mobilno Pranje</a>
-      <nav class="space-x-6 text-sm">
-        <a href="#usluge" class="hover:text-blue-400">Usluge</a>
-        <a href="#termin" class="hover:text-blue-400">Zakaži</a>
-        <a href="#kontakt" class="hover:text-blue-400">Kontakt</a>
-        <button onclick="openAdmin()" class="bg-blue-600 px-4 py-2 rounded-xl">Admin</button>
-      </nav>
-    </div>
-  </header>
+<!-- NAVBAR -->
+<header class="bg-slate-900 border-b border-slate-800 fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#top" class="text-2xl font-bold text-blue-500">Mobilno Pranje</a>
+    <nav class="space-x-6 text-sm">
+      <a href="#usluge" class="hover:text-blue-400">Usluge</a>
+      <a href="#termin" class="hover:text-blue-400">Zakaži</a>
+      <a href="#kontakt" class="hover:text-blue-400">Kontakt</a>
+      <button onclick="openAdmin()" class="bg-blue-600 px-4 py-2 rounded-xl">Admin</button>
+    </nav>
+  </div>
+</header>
 
-  <div id="top"></div>
+<div id="top"></div>
 
-  <!-- HERO -->
-  <section class="pt-40 pb-24 text-center bg-gradient-to-b from-slate-900 to-slate-950">
-    <h2 class="text-5xl font-extrabold mb-6">Mobilno pranje vozila na vašoj adresi</h2>
-    <p class="text-slate-400 max-w-xl mx-auto mb-8">
-      Profesionalno dubinsko pranje, poliranje i zaštita bez dolaska u perionicu.
-    </p>
-    <a href="#termin" class="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-2xl text-lg">Zakaži termin</a>
-  </section>
+<!-- HERO -->
+<section class="pt-40 pb-24 text-center bg-gradient-to-b from-slate-900 to-slate-950">
+  <h2 class="text-5xl font-extrabold mb-6">Mobilno pranje vozila na vašoj adresi</h2>
+  <p class="text-slate-400 max-w-xl mx-auto mb-8">
+    Dolazimo na vašu lokaciju u Beogradu i okolini. Brzo, profesionalno i bez čekanja.
+  </p>
+  <a href="#termin" class="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-2xl text-lg">Zakaži termin</a>
+</section>
 
-  <!-- USLUGE -->
-  <section id="usluge" class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
+<!-- USLUGE -->
+<section id="usluge" class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
 
-    <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
-      <div class="text-4xl mb-4">🚿</div>
-      <h3 class="text-xl font-bold mb-2">Pranje</h3>
-      <p class="text-slate-400">Spoljašnje i unutrašnje čišćenje vozila na adresi.</p>
-    </div>
+  <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+    <div class="text-4xl mb-4">🚿</div>
+    <h3 class="text-xl font-bold mb-2">Pranje</h3>
+    <p class="text-slate-400">Spoljašnje i unutrašnje čišćenje vozila na adresi.</p>
+  </div>
 
-    <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
-      <div class="text-4xl mb-4">✨</div>
-      <h3 class="text-xl font-bold mb-2">Poliranje</h3>
-      <p class="text-slate-400">Uklanjanje ogrebotina i vraćanje sjaja laku.</p>
-    </div>
+  <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+    <div class="text-4xl mb-4">✨</div>
+    <h3 class="text-xl font-bold mb-2">Poliranje</h3>
+    <p class="text-slate-400">Uklanjanje ogrebotina i vraćanje dubokog sjaja laku.</p>
+  </div>
 
-    <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
-      <div class="text-4xl mb-4">🛡️</div>
-      <h3 class="text-xl font-bold mb-2">Voskiranje</h3>
-      <p class="text-slate-400">Zaštita laka i dugotrajan sjaj vašeg vozila.</p>
-    </div>
+  <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+    <div class="text-4xl mb-4">🛡️</div>
+    <h3 class="text-xl font-bold mb-2">Zaštita / Vosak</h3>
+    <p class="text-slate-400">Dugotrajna zaštita laka i hidrofobni efekat.</p>
+  </div>
 
-  </section>
+</section>
 
-  <!-- TERMINI -->
-  <section id="termin" class="bg-slate-900 py-20">
-    <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6 text-center">Zakažite termin</h2>
+<!-- TERMINI + KALENDAR -->
+<section id="termin" class="bg-slate-900 py-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-10 text-center">Online zakazivanje</h2>
 
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- FORMA -->
       <form onsubmit="saveBooking(event)" class="space-y-4">
         <input required placeholder="Ime" class="w-full p-3 rounded-xl bg-slate-800" />
         <input required placeholder="Telefon" class="w-full p-3 rounded-xl bg-slate-800" />
-        <input required type="date" class="w-full p-3 rounded-xl bg-slate-800" />
+        <input required type="date" id="dateInput" class="w-full p-3 rounded-xl bg-slate-800" />
+
         <select class="w-full p-3 rounded-xl bg-slate-800">
           <option>Pranje</option>
           <option>Poliranje</option>
-          <option>Voskiranje</option>
+          <option>Zaštita / Vosak</option>
         </select>
 
         <button class="w-full bg-blue-600 py-3 rounded-xl">Potvrdi termin</button>
+        <p id="msg" class="text-green-400 hidden">Termin sačuvan ✔</p>
       </form>
 
-      <p id="msg" class="text-green-400 text-center mt-4 hidden">Termin uspešno sačuvan.</p>
-    </div>
-  </section>
+      <!-- LISTA TERMINA -->
+      <div>
+        <h3 class="font-bold mb-4">Zauzeti termini</h3>
+        <div id="calendar" class="space-y-2 text-sm"></div>
+      </div>
 
-  <!-- KONTAKT -->
-  <section id="kontakt" class="py-20 text-center">
-    <h2 class="text-3xl font-bold mb-4">Kontakt</h2>
-    <p class="text-slate-400">Telefon: 066 800 9318</p>
-    <p class="text-slate-400">Beograd i okolina</p>
-  </section>
-
-  <!-- ADMIN PANEL -->
-  <div id="adminModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center">
-    <div class="bg-slate-900 p-8 rounded-2xl w-full max-w-md">
-      <h2 class="text-2xl font-bold mb-4">Admin prijava</h2>
-      <input id="pass" type="password" placeholder="lozinka" class="w-full p-3 rounded-xl bg-slate-800 mb-4" />
-      <button onclick="login()" class="w-full bg-blue-600 py-3 rounded-xl">Prijavi se</button>
     </div>
   </div>
+</section>
 
-  <div id="adminPanel" class="hidden fixed inset-0 bg-slate-950 p-10 overflow-auto">
-    <h2 class="text-3xl font-bold mb-6">Rezervacije</h2>
-    <div id="list" class="space-y-3"></div>
-    <button onclick="closeAdmin()" class="mt-6 bg-red-600 px-6 py-3 rounded-xl">Zatvori</button>
+<!-- KONTAKT -->
+<section id="kontakt" class="py-20 text-center">
+  <h2 class="text-3xl font-bold mb-4">Kontakt</h2>
+  <p class="text-slate-400">Telefon / WhatsApp: 066 800 9318</p>
+  <a href="https://wa.me/381668009318" class="inline-block mt-4 bg-green-600 px-6 py-3 rounded-xl">Pošalji poruku</a>
+</section>
+
+<!-- ADMIN -->
+<div id="adminModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center">
+  <div class="bg-slate-900 p-8 rounded-2xl w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-4">Admin prijava</h2>
+    <input id="pass" type="password" placeholder="Šifra" class="w-full p-3 rounded-xl bg-slate-800 mb-4" />
+    <button onclick="login()" class="w-full bg-blue-600 py-3 rounded-xl">Prijavi se</button>
   </div>
+</div>
+
+<div id="adminPanel" class="hidden fixed inset-0 bg-slate-950 p-10 overflow-auto">
+  <h2 class="text-3xl font-bold mb-6">Sve rezervacije</h2>
+  <div id="list" class="space-y-3"></div>
+  <button onclick="closeAdmin()" class="mt-6 bg-red-600 px-6 py-3 rounded-xl">Zatvori</button>
+</div>
 
 <script>
-function saveBooking(e) {
-  e.preventDefault();
-  const inputs = e.target.querySelectorAll('input, select');
-  const booking = {
-    ime: inputs[0].value,
-    tel: inputs[1].value,
-    datum: inputs[2].value,
-    usluga: inputs[3].value
-  };
+function getBookings(){
+  return JSON.parse(localStorage.getItem('bookings')||'[]');
+}
 
-  const data = JSON.parse(localStorage.getItem('bookings') || '[]');
+function renderCalendar(){
+  const cal=document.getElementById('calendar');
+  cal.innerHTML='';
+  getBookings().forEach(b=>{
+    const d=document.createElement('div');
+    d.className='bg-slate-800 p-2 rounded';
+    d.textContent=b.datum+' — '+b.usluga;
+    cal.appendChild(d);
+  });
+}
+
+function saveBooking(e){
+  e.preventDefault();
+  const inputs=e.target.querySelectorAll('input,select');
+  const booking={ime:inputs[0].value,tel:inputs[1].value,datum:inputs[2].value,usluga:inputs[3].value};
+
+  const data=getBookings();
+
+  if(data.find(b=>b.datum===booking.datum)){
+    alert('Termin je već zauzet');
+    return;
+  }
+
   data.push(booking);
-  localStorage.setItem('bookings', JSON.stringify(data));
+  localStorage.setItem('bookings',JSON.stringify(data));
 
   document.getElementById('msg').classList.remove('hidden');
   e.target.reset();
+  renderCalendar();
 }
 
-function openAdmin() {
-  document.getElementById('adminModal').classList.remove('hidden');
-}
+function openAdmin(){document.getElementById('adminModal').classList.remove('hidden');}
+function closeAdmin(){document.getElementById('adminPanel').classList.add('hidden');}
 
-function closeAdmin() {
-  document.getElementById('adminPanel').classList.add('hidden');
-}
-
-function login() {
-  if (document.getElementById('pass').value === 'boris') {
+function login(){
+  if(document.getElementById('pass').value==='admin123'){
     document.getElementById('adminModal').classList.add('hidden');
     document.getElementById('adminPanel').classList.remove('hidden');
     loadBookings();
-  } else alert('Pogrešna šifra');
+  }else alert('Pogrešna šifra');
 }
 
-function loadBookings() {
-  const list = document.getElementById('list');
-  list.innerHTML = '';
-  const data = JSON.parse(localStorage.getItem('bookings') || '[]');
-
-  data.forEach((b, i) => {
-    const div = document.createElement('div');
-    div.className = 'bg-slate-900 p-4 rounded-xl flex justify-between';
-    div.innerHTML = `<span>${b.ime} | ${b.tel} | ${b.datum} | ${b.usluga}</span>
-      <button onclick="deleteBooking(${i})" class="text-red-400">Obriši</button>`;
+function loadBookings(){
+  const list=document.getElementById('list');
+  list.innerHTML='';
+  getBookings().forEach((b,i)=>{
+    const div=document.createElement('div');
+    div.className='bg-slate-900 p-4 rounded-xl flex justify-between';
+    div.innerHTML=`<span>${b.ime} | ${b.tel} | ${b.datum} | ${b.usluga}</span>
+    <button onclick="deleteBooking(${i})" class="text-red-400">Obriši</button>`;
     list.appendChild(div);
   });
 }
 
-function deleteBooking(i) {
-  const data = JSON.parse(localStorage.getItem('bookings') || '[]');
-  data.splice(i, 1);
-  localStorage.setItem('bookings', JSON.stringify(data));
+function deleteBooking(i){
+  const data=getBookings();
+  data.splice(i,1);
+  localStorage.setItem('bookings',JSON.stringify(data));
   loadBookings();
+  renderCalendar();
 }
+
+renderCalendar();
 </script>
 
 </body>
