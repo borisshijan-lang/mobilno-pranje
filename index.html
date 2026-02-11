@@ -3,223 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mobilno pranje</title>
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-
-    body { background: #f4f6f9; color: #222; }
-
-    header {
-      background: #0d1b3d;
-      color: white;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 { font-size: 1.5rem; }
-
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover { color: #4da3ff; }
-
-    .hero {
-      background: linear-gradient(135deg, #0d1b3d, #1a3d7c);
-      color: white;
-      text-align: center;
-      padding: 120px 20px 100px;
-    }
-
-    .hero h2 { font-size: 3rem; margin-bottom: 15px; }
-    .hero p { font-size: 1.2rem; margin-bottom: 25px; }
-
-    .btn {
-      background: #ffffff;
-      color: #0d1b3d;
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .btn:hover { background: #e6ecff; }
-
-    section { padding: 80px 20px; max-width: 1150px; margin: auto; }
-
-    section h2 {
-      text-align: center;
-      margin-bottom: 45px;
-      font-size: 2.4rem;
-      color: #1a3d7c;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 35px 25px;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover { transform: translateY(-8px); }
-
-    .card img { width: 70px; margin-bottom: 15px; }
-
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .price-card {
-      background: white;
-      border-radius: 16px;
-      padding: 35px 25px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .price-card h3 { margin-bottom: 10px; }
-    .price { font-size: 2rem; color: #1a3d7c; margin: 15px 0; }
-
-    .calendar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 15px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .slot {
-      background: white;
-      padding: 18px;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: bold;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      cursor: pointer;
-      transition: 0.2s;
-      text-decoration: none;
-      color: #222;
-    }
-
-    .slot:hover { background: #1a3d7c; color: white; }
-
-    .contact { text-align: center; }
-    .contact p { margin: 10px 0; font-size: 1.1rem; }
-
-    footer { background: #0d1b3d; color: white; text-align: center; padding: 25px; margin-top: 40px; }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Mobilno pranje</h1>
-  <nav>
-    <a href="#usluge">Usluge</a>
-    <a href="#cene">Cenovnik</a>
-    <a href="#termini">Termini</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>Profesionalno mobilno pranje vozila</h2>
-  <p>Dolazimo na vašu adresu, štedimo vaše vreme i vraćamo sjaj automobilu.</p>
-  <a href="#termini" class="btn">Rezerviši termin</a>
-</section>
-
-<section id="usluge">
-  <h2>Naše usluge</h2>
-  <div class="services">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/000000/van.png" />
-      <h3>Mobilno pranje</h3>
-      <p>Dolazimo na vašu lokaciju i peremo vozilo bez čekanja.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/000000/car-polish.png" />
-      <h3>Poliranje i vosak</h3>
-      <p>Obnavljamo sjaj i štitimo lak vozila profesionalnim sredstvima.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/000000/car-seat.png" />
-      <h3>Dubinsko čišćenje</h3>
-      <p>Temeljno čišćenje enterijera, dezinfekcija i uklanjanje mrlja.</p>
-    </div>
-  </div>
-</section>
-
-<section id="cene">
-  <h2>Cenovnik</h2>
-  <div class="pricing">
-    <div class="price-card">
-      <h3>Osnovno pranje</h3>
-      <div class="price">1500 RSD</div>
-      <p>Spoljašnje pranje + brisanje.</p>
-    </div>
-
-    <div class="price-card">
-      <h3>Detaljno pranje</h3>
-      <div class="price">3000 RSD</div>
-      <p>Spolja + unutra, usisavanje i plastike.</p>
-    </div>
-
-    <div class="price-card">
-      <h3>Premium paket</h3>
-      <div class="price">6000 RSD</div>
-      <p>Dubinsko + poliranje + zaštita laka.</p>
-    </div>
-  </div>
-</section>
-
-<section id="termini">
-  <h2>Slobodni termini</h2>
-  <div class="calendar">
-    <a class="slot" href="https://wa.me/381668009318?text=Želim%20termin%20Ponedeljak%2010:00" target="_blank">Ponedeljak 10:00</a>
-    <a class="slot" href="https://wa.me/381668009318?text=Želim%20termin%20Utorak%2013:00" target="_blank">Utorak 13:00</a>
-    <a class="slot" href="https://wa.me/381668009318?text=Želim%20termin%20Sreda%2011:00" target="_blank">Sreda 11:00</a>
-    <a class="slot" href="https://wa.me/381668009318?text=Želim%20termin%20Četvrtak%2015:00" target="_blank">Četvrtak 15:00</a>
-    <a class="slot" href="https://wa.me/381668009318?text=Želim%20termin%20Petak%2010:00" target="_blank">Petak 10:00</a>
-  </div>
-</section>
-
-  <!DOCTYPE html>
-<html lang="sr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mobilno Pranje</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-950 text-white">
+<body class="bg-slate-950 text-white scroll-smooth">
 
   <!-- NAVBAR -->
-  <header class="bg-slate-900 border-b border-slate-800">
+  <header class="bg-slate-900 border-b border-slate-800 fixed w-full z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-500">Mobilno Pranje</h1>
+      <a href="#top" class="text-2xl font-bold text-blue-500">Mobilno Pranje</a>
       <nav class="space-x-6 text-sm">
         <a href="#usluge" class="hover:text-blue-400">Usluge</a>
         <a href="#termin" class="hover:text-blue-400">Zakaži</a>
@@ -229,8 +21,10 @@
     </div>
   </header>
 
+  <div id="top"></div>
+
   <!-- HERO -->
-  <section class="py-24 text-center bg-gradient-to-b from-slate-900 to-slate-950">
+  <section class="pt-40 pb-24 text-center bg-gradient-to-b from-slate-900 to-slate-950">
     <h2 class="text-5xl font-extrabold mb-6">Mobilno pranje vozila na vašoj adresi</h2>
     <p class="text-slate-400 max-w-xl mx-auto mb-8">
       Profesionalno dubinsko pranje, poliranje i zaštita bez dolaska u perionicu.
@@ -294,7 +88,7 @@
   <div id="adminModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center">
     <div class="bg-slate-900 p-8 rounded-2xl w-full max-w-md">
       <h2 class="text-2xl font-bold mb-4">Admin prijava</h2>
-      <input id="pass" type="password" placeholder="Šifra" class="w-full p-3 rounded-xl bg-slate-800 mb-4" />
+      <input id="pass" type="password" placeholder="lozinka" class="w-full p-3 rounded-xl bg-slate-800 mb-4" />
       <button onclick="login()" class="w-full bg-blue-600 py-3 rounded-xl">Prijavi se</button>
     </div>
   </div>
@@ -306,7 +100,6 @@
   </div>
 
 <script>
-
 function saveBooking(e) {
   e.preventDefault();
   const inputs = e.target.querySelectorAll('input, select');
@@ -334,7 +127,7 @@ function closeAdmin() {
 }
 
 function login() {
-  if (document.getElementById('pass').value === 'admin123') {
+  if (document.getElementById('pass').value === 'boris') {
     document.getElementById('adminModal').classList.add('hidden');
     document.getElementById('adminPanel').classList.remove('hidden');
     loadBookings();
@@ -361,22 +154,7 @@ function deleteBooking(i) {
   localStorage.setItem('bookings', JSON.stringify(data));
   loadBookings();
 }
-
 </script>
-
-</body>
-</html>
-
-<section id="kontakt" class="contact">
-  <h2>Kontakt</h2>
-  <p>📞 Telefon: 066 800 9318</p>
-  <p>📍 Beograd i okolina</p>
-  <p>📧 Email: mobilnopranje@gmail.com</p>
-</section>
-
-<footer>
-  © 2026 Mobilno pranje — Sva prava zadržana
-</footer>
 
 </body>
 </html>
