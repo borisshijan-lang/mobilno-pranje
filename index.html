@@ -7,127 +7,45 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-
     body { background: #f4f6f9; color: #222; }
 
     header {
-      background: #0d1b3d;
-      color: white;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      background: #0d1b3d; color: white; padding: 15px 40px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 10;
     }
 
-    header h1 { font-size: 1.4rem; }
-
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
+    nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
     nav a:hover { color: #4da3ff; }
 
-    .hero {
-      height: 95vh;
-      background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
+    .hero { background: linear-gradient(135deg, #0d1b3d, #1a3d7c); color: white; text-align: center; padding: 120px 20px 100px; }
+    .hero h2 { font-size: 3rem; margin-bottom: 15px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 25px; }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
-
-    .hero-content { position: relative; z-index: 1; max-width: 750px; }
-
-    .hero h2 { font-size: 3.2rem; margin-bottom: 15px; }
-
-    .hero p { font-size: 1.25rem; margin-bottom: 25px; }
-
-    .btn {
-      background: #1a3d7c;
-      padding: 14px 28px;
-      color: white;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .btn:hover { background: #122a57; }
+    .btn { background: #fff; color: #0d1b3d; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; }
 
     section { padding: 80px 20px; max-width: 1150px; margin: auto; }
+    section h2 { text-align: center; margin-bottom: 45px; font-size: 2.4rem; color: #1a3d7c; }
 
-    section h2 {
-      text-align: center;
-      margin-bottom: 45px;
-      font-size: 2.4rem;
-      color: #1a3d7c;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px 20px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 35px rgba(0,0,0,0.12); }
-
-    .card img { width: 80px; margin-bottom: 15px; }
-
-    .about { text-align: center; max-width: 700px; margin: auto; font-size: 1.1rem; line-height: 1.6; }
-
-    /* TERMINI */
-    .calendar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 15px;
-      max-width: 800px;
-      margin: auto;
-    }
+    .calendar { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; max-width: 800px; margin: auto; }
 
     .slot {
-      background: white;
-      padding: 18px;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: bold;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      cursor: pointer;
-      transition: 0.2s;
+      background: white; padding: 18px; border-radius: 10px; text-align: center; font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08); cursor: pointer; transition: 0.2s;
     }
 
     .slot:hover { background: #1a3d7c; color: white; }
+    .taken { background: #ccc !important; color: #666 !important; cursor: not-allowed; }
 
-    .contact { text-align: center; }
+    .form-box { max-width: 500px; margin: 40px auto 0; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 
-    .contact p { margin: 10px 0; font-size: 1.1rem; }
+    input, button {
+      width: 100%; padding: 12px; margin-top: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;
+    }
 
-    footer { background: #0d1b3d; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    button { background: #1a3d7c; color: white; border: none; font-weight: bold; cursor: pointer; }
+
+    footer { background: #0d1b3d; color: white; text-align: center; padding: 25px; margin-top: 40px; }
   </style>
 </head>
 <body>
@@ -135,69 +53,78 @@
 <header>
   <h1>Mobilno pranje</h1>
   <nav>
-    <a href="#usluge">Usluge</a>
     <a href="#termini">Termini</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <h2>Mobilno pranje vozila</h2>
-    <p>Dolazimo na vašu adresu i vraćamo sjaj vašem automobilu.</p>
-    <a href="#termini" class="btn">Pogledaj slobodne termine</a>
-  </div>
-</section>
-
-<section id="usluge">
-  <h2>Naše usluge</h2>
-  <div class="services">
-
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/000000/van.png" />
-      <h3>Pranje sa dolaskom</h3>
-      <p>Peremo vaše vozilo na vašoj adresi bez čekanja i gubljenja vremena.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/000000/car-polish.png" />
-      <h3>Poliranje i voskiranje</h3>
-      <p>Obnavljamo sjaj laka i štitimo vozilo od spoljašnjih uticaja.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/000000/car-seat.png" />
-      <h3>Dubinsko čišćenje</h3>
-      <p>Temeljno čišćenje enterijera, usisavanje i dezinfekcija.</p>
-    </div>
-
-  </div>
+  <h2>Online rezervacija pranja</h2>
+  <p>Izaberi slobodan termin i rezerviši za 10 sekundi.</p>
+  <a href="#termini" class="btn">Pogledaj termine</a>
 </section>
 
 <section id="termini">
   <h2>Slobodni termini</h2>
-  <div class="calendar">
-    <a class="slot" href="https://wa.me/3816XXXXXXXX?text=Zdravo,%20želim%20termin%20Ponedeljak%2010:00" target="_blank">Ponedeljak 10:00</a>
-    <a class="slot" href="https://wa.me/3816XXXXXXXX?text=Zdravo,%20želim%20termin%20Ponedeljak%2014:00" target="_blank">Ponedeljak 14:00</a>
-    <a class="slot" href="https://wa.me/3816XXXXXXXX?text=Zdravo,%20želim%20termin%20Utorak%2009:00" target="_blank">Utorak 09:00</a>
-    <a class="slot" href="https://wa.me/3816XXXXXXXX?text=Zdravo,%20želim%20termin%20Utorak%2013:00" target="_blank">Utorak 13:00</a>
-    <a class="slot" href="https://wa.me/3816XXXXXXXX?text=Zdravo,%20želim%20termin%20Sreda%2011:00" target="_blank">Sreda 11:00</a>
-    <a class="slot" href="https://wa.me/3816XXXXXXXX?text=Zdravo,%20želim%20termin%20Četvrtak%2015:00" target="_blank">Četvrtak 15:00</a>
-    <a class="slot" href="https://wa.me/3816XXXXXXXX?text=Zdravo,%20želim%20termin%20Petak%2010:00" target="_blank">Petak 10:00</a>
-    <a class="slot" href="https://wa.me/3816XXXXXXXX?text=Zdravo,%20želim%20termin%20Subota%2012:00" target="_blank">Subota 12:00</a>
+  <div class="calendar" id="calendar"></div>
+
+  <div class="form-box" id="formBox" style="display:none">
+    <h3>Rezervacija termina: <span id="selected"></span></h3>
+    <input type="text" id="name" placeholder="Ime i prezime" />
+    <input type="tel" id="phone" placeholder="Telefon" />
+    <button onclick="reserve()">Potvrdi rezervaciju</button>
   </div>
 </section>
 
-<section id="kontakt" class="contact">
+<section id="kontakt" style="text-align:center">
   <h2>Kontakt</h2>
-  <p>📞 Telefon: 066 800 9318</p>
-  <p>📍 Beograd i okolina</p>
-  <p>📧 Email: mobilnopranje@gmail.com</p>
+  <p>📍 Beograd</p>
+  <p>📞 06X XXX XXXX</p>
 </section>
 
-<footer>
-  © 2026 Mobilno pranje — Sva prava zadržana
-</footer>
+<footer>© 2026 Mobilno pranje</footer>
+
+<script>
+const terms = [
+  "Ponedeljak 10:00","Ponedeljak 14:00",
+  "Utorak 09:00","Utorak 13:00",
+  "Sreda 11:00","Četvrtak 15:00",
+  "Petak 10:00","Subota 12:00"
+];
+
+const taken = JSON.parse(localStorage.getItem("taken")) || [];
+const calendar = document.getElementById("calendar");
+let chosen = null;
+
+terms.forEach(t => {
+  const div = document.createElement("div");
+  div.className = "slot" + (taken.includes(t) ? " taken" : "");
+  div.innerText = t;
+
+  if (!taken.includes(t)) {
+    div.onclick = () => {
+      chosen = t;
+      document.getElementById("formBox").style.display = "block";
+      document.getElementById("selected").innerText = t;
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    };
+  }
+
+  calendar.appendChild(div);
+});
+
+function reserve() {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+
+  if (!name || !phone) return alert("Unesite podatke");
+
+  taken.push(chosen);
+  localStorage.setItem("taken", JSON.stringify(taken));
+
+  window.location.href = `https://wa.me/3816XXXXXXXX?text=Rezervacija:%20${chosen}%20-%20${name}%20(${phone})`;
+}
+</script>
 
 </body>
 </html>
